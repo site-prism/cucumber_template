@@ -1,0 +1,6 @@
+passing: --tags 'not @failing and not @future_release'
+
+html: --format html --out tmp/reports/report.html
+junit: --format junit --out tmp/reports
+
+reports: --format progress -p passing -p html -p junit
