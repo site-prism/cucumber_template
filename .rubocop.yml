@@ -1,0 +1,37 @@
+# This allows us to merge arrays for Exclude rules on AllCops or a specific cop
+# This ideally should be the default
+inherit_mode:
+  merge:
+    - Exclude
+
+# Require each sub-gem you are using for your repo here
+# Make sure each of these is included in your gemfile
+require:
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  # Set the Target RubyVersion to the value of ruby in `.ruby-version`
+  TargetRubyVersion: 3.2
+  # This is a personal preference to enable all new v1 cops. Disable this if you want a more safety-first approach
+  NewCops: enable
+  # This setting ensures you don't accidentally pull in rubocop styles from other gems you have installed
+  Exclude:
+    - vendor/**/*
+
+# This allows a longer LineLength and ignores cuke definitions
+Layout/LineLength:
+  Max: 140
+  AllowedPatterns:
+    - ^Given
+    - ^When
+    - ^Then
+
+# If you want to document your code - Don't set this rule (leave this enabled)
+Style/Documentation:
+  Enabled: false
+
+# This is a better style, and should be the default in the ruby style guide
+Style/RegexpLiteral:
+  EnforcedStyle: slashes
+  AllowInnerSlashes: true
