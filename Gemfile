@@ -2,8 +2,12 @@
 
 source "https://rubygems.org"
 
+ruby "3.2.1"
+
 gem "automation_helpers"
-gem "rubocop", "~> 1.3"
+gem "rubocop", "~> 1.48.1"
+gem "rubocop-performance", "~> 1.16.0"
+gem "rubocop-rspec", "~> 2.19.0"
 gem "cucumber", "~> 8.0"
 gem "dotenv"
 gem "faraday", "~> 1.3"
