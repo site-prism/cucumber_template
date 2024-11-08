@@ -9,6 +9,7 @@ BeforeAll do
 end
 
 Before do |test_case|
+  @app ||= App.new
   CucumberInfo.test_case = test_case
   skip_this_scenario('Scenario is not permitted to run. See logs for details') if CucumberInfo.skip_scenario?
   resize_window unless device?
