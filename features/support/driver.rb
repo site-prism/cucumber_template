@@ -34,17 +34,17 @@ class Driver
 
   def setup_site_prism
     SitePrism.configure do |config|
-      config.log_path = "tmp/logs/site_prism.log"
+      config.log_path = 'tmp/logs/site_prism.log'
       config.log_level = log_level
 
       # This will be required until v4 of SitePrism is released
-      require "site_prism/all_there"
+      require 'site_prism/all_there'
       config.use_all_there_gem = true
     end
   end
 
   def setup_selenium_webdriver
     Selenium::WebDriver.logger.level = log_level
-    Selenium::WebDriver.logger.output = "tmp/logs/webdriver.log"
+    Selenium::WebDriver.logger.output = 'tmp/logs/webdriver.log'
   end
 end

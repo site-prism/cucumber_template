@@ -18,7 +18,7 @@ class AutomationLogger
 
     def create_logger
       ::Logger.new(log_name, logs_to_keep, size_of_log).tap do |logger|
-        logger.progname = "AutomationLogger"
+        logger.progname = 'AutomationLogger'
         logger.level = log_level
         logger.formatter = proc do |severity, time, progname, msg|
           "#{time.strftime('%F %T')} - #{severity} - #{progname} - #{msg}\n"
@@ -27,7 +27,7 @@ class AutomationLogger
     end
 
     def log_name
-      Pathname.new("tmp/logs") + log_location
+      Pathname.new('tmp/logs') + log_location
     end
 
     def logs_to_keep

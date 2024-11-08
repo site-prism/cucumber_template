@@ -10,11 +10,11 @@ end
 
 Before do |test_case|
   CucumberInfo.test_case = test_case
-  skip_this_scenario("Scenario is not permitted to run. See logs for details") if CucumberInfo.skip_scenario?
+  skip_this_scenario('Scenario is not permitted to run. See logs for details') if CucumberInfo.skip_scenario?
   resize_window unless device?
-  resize_window(320) if test_case.source_tag_names.include?("@small_screen") && !device?
+  resize_window(320) if test_case.source_tag_names.include?('@small_screen') && !device?
   AutomationLogger.info("Running Scenario: #{test_case.name}")
-  AutomationLogger.debug("BROWSERSTACK_CONFIGURATION_OPTIONS = #{ENV['BROWSERSTACK_CONFIGURATION_OPTIONS']}")
+  AutomationLogger.debug("BROWSERSTACK_CONFIGURATION_OPTIONS = #{ENV.fetch('BROWSERSTACK_CONFIGURATION_OPTIONS', nil)}")
 end
 
 After do |test_case|
@@ -26,7 +26,7 @@ After do |test_case|
     test_case.exception&.backtrace&.each&.with_index(1) do |backtrace_line, index|
       AutomationLogger.error("BACKTRACE #{index}) #{backtrace_line}")
     end
-    CucumberInfo.scenario_result = "failed"
+    CucumberInfo.scenario_result = 'failed'
   else
     AutomationLogger.info("Scenario: #{test_case.name} - Status: #{test_case.status.upcase}")
   end
