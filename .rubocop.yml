@@ -12,7 +12,7 @@ require:
 
 AllCops:
   # Set the Target RubyVersion to the value of ruby in `.ruby-version`
-  TargetRubyVersion: 3.2
+  TargetRubyVersion: 3.3
   # This is a personal preference to enable all new v1 cops. Disable this if you want a more safety-first approach
   NewCops: enable
   # This setting ensures you don't accidentally pull in rubocop styles from other gems you have installed
