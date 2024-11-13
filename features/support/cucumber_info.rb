@@ -11,7 +11,7 @@ class CucumberInfo
     attr_writer :scenario_result
 
     def skip_scenario?
-      Skipper.new(tag_array).skip_scenario?
+      ScenarioSkipper.new(tag_array).skip_scenario?
     end
 
     def set_session_id

@@ -16,6 +16,22 @@ module Helpers
       false
     end
 
+    def device?
+      false
+    end
+
+    def ios13?
+      false
+    end
+
+    def ipad?
+      false
+    end
+
+    def iphone?
+      false
+    end
+
     def safari?
       false
     end
