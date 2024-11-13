@@ -1,0 +1,13 @@
+source:
+  top:
+    level:
+      data:
+        keys:
+          are: here
+        also:
+          are: here
+          and: here
+      list:
+        - value1
+        - value2
+        - value3
