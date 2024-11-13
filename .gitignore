@@ -1,0 +1,3 @@
+# Keep nothing in these directories except the 'keep' files
+tmp/**/*
+!tmp/**/.keep
