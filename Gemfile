@@ -2,8 +2,9 @@
 
 source 'https://rubygems.org'
 
-ruby '3.3.5'
+ruby '3.3.6'
 
+gem 'activesupport'
 gem 'automation_helpers'
 gem 'cucumber', '~> 9.2'
 gem 'dotenv'
