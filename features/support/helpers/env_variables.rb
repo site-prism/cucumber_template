@@ -39,5 +39,9 @@ module Helpers
     def log_level
       :INFO
     end
+
+    def log_location
+      'automation_logger.log'
+    end
   end
 end

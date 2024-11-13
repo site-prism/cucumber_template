@@ -43,4 +43,3 @@ Driver.new.register
 AutomationHelpers.logger.level = :DEBUG
 AutomationHelpers::Patches::Capybara.new.patch!
 AutomationHelpers::Patches::SeleniumLogger.new.patch!
-AutomationHelpers::Patches::SeleniumOptions.new(ENV['BROWSER'].to_sym).patch!
