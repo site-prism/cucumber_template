@@ -1,0 +1,4 @@
+# Keep nothing in these directories except the 'keep' files
+.env
+tmp/**/*
+!tmp/**/.keep
