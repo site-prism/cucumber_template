@@ -7,6 +7,7 @@ require_relative 'env_variables'
 require_relative 'methods'
 
 require_relative 'data'
+require_relative 'interceptor'
 require_relative 'javascript'
 require_relative 'page'
 require_relative 'regex'
