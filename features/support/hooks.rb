@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# This file is setup the way I like to store and create all my hooks - for ease and simplicity
+# This file is configured the way I like to store and create all my hooks - for ease and simplicity
 
 # Any / all configuration here is person/team specific. The preferences here are my own
 
